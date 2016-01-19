@@ -1,0 +1,942 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+<meta http-equiv-"X-UA-Compatible" content="IE=EmulateIE7">
+<title>电子工程_设计应用_开发者的家园_电子产品世界</title>
+<style type="text/css">
+/* 全局CSS定义 */
+*{margin:0;padding:0;}
+body{font-family:'微软雅黑',Arial,Helvetica,sans-serif,'宋体';text-align:center;margin:0 auto;padding:0;font-size:12px;color:#333;}
+
+h1,h2,h3,h4,h5,h6{font-size:12px;font-weight:bold;}
+ul,ol,li{list-style:none;}
+
+/* 默认链接颜色 */
+a{outline-style:none; color:#393939;;text-decoration:none}
+a:hover{color:#C90000;text-decoration:underline;}
+
+/* 通用属性 */
+.left{float:left;}
+.right{float:right;}
+.clear{clear:both;}
+
+/*文字对齐方式*/
+.txtLeft{text-align:left;}
+.txtRight{text-align:right;}
+.txtCenter{text-align:center;}
+
+/*常用方法*/
+.show{display:block}
+.hidden{display:none}
+.hand{cursor:pointer;}
+.fontArial{font-family:'Arial';}
+.b{font-weight:bold;}
+
+img{border:none;}
+.clear{clear:both;}
+
+/* CSS空白 */
+.blank1{margin:0 auto;height:1px;font-size:1px;clear:both;}
+.blank2{margin:0 auto;height:2px;font-size:1px;clear:both;}
+.blank3{margin:0 auto;height:3px;font-size:1px;clear:both;}
+.blank5{margin:0 auto;height:5px;font-size:1px;clear:both;}
+.blank8{margin:0 auto;height:8px;font-size:1px;clear:both;}
+.blank10{margin:0 auto;height:10px;font-size:1px;clear:both;}
+.blank15{margin:0 auto;height:15px;font-size:1px;clear:both;}
+
+/* 顶部 */
+#topbar{z-index:999;position:fixed;top:0;left:0;width:100%;height:28px;background:#F6F6F6;border-bottom:solid 1px #E0E3E6;_position:absolute;_top:expression(eval(document.documentElement.scrollTop));overflow:visible;}
+.topbar{margin:0 auto;width:1002px;height:28px;color:#727171;}
+.topbar a{color:#727171;}
+.topbar a:hover{color:#BA2636;}
+.user{float:left;width:202px;height:28px;line-height:28px;text-align:left;}
+a.username{color:#1E50A2;}
+a.username:hover{color:#1E50A2;text-decoration:underline;}
+.nuodou1{float:left;width:500px;height:28px;overflow:hidden;white-space:nowrap;color:#FF6600;}
+.nuodou2{margin:0px auto;}
+.div2{width:auto;height:28px;font-size:12px;line-height:28px;vertical-align:middle;}
+.div2 a{padding-right:20px;color:#BA2636;}
+.div2 a:hover{color:#BA2636;text-decoration:underline;}
+.topnav{float:left;position:relative;left:5px;width:300px;height:28px;line-height:28px;text-align:right;}
+.topnav a{padding:0 5px;}
+
+/* header */
+#header{margin:0 auto;padding-top:29px;width:1002px;}
+#header .logo_ad{padding:5px 0;height:60px;background:url(images/logo.gif) 0 10px no-repeat}
+#header .header_ad{float:right;width:720px;height:60px;}
+#header .nav{height:30px;line-height:30px;background:#C21415;color:#920400;}
+#header .nav a{padding:7px;color:#FFF;}
+#header .tech_nav{margin-top:2px;border:solid 1px #E8E8E8;text-align:left;color:#E0E3E6;}
+#header .tech_nav .tech_nav_inner{padding:2px 10px;border:solid 2px #F7F7F7;}
+#header .tech_nav a{padding:0 16px;}
+
+.top_ad{margin:0 auto;border:solid 1px #E8E8E8;width:990px;padding:5px;background:#F7F7F7;}
+.top_ad .l_top_ad{float:left;width:458px;height:70px;}
+.top_ad .r_top_ad{float:right;width:520px;height:70px;}
+
+#mainbody{margin:0 auto;width:1002px;background:#FFF;}
+#column680{float:left;width:680px;background:#FFF;}
+#column312{float:right;width:312px;background:#FFF;}
+#l_column335{float:left;width:335px;background:#FFF;}
+#r_column335{float:right;width:335px;background:#FFF;}
+.focus{padding:5px;border:solid 5px #EFEFEF;background:#FFF;}
+.notice_rec{padding:10px;border:solid 1px #EFEFEF;background:#FFF;}
+.notice_rec p{text-align:left;line-height:1.6em;}
+.notice_rec p span{font-size:14px;font-weight:bold;}
+.notice_rec p span a{color:#039;}
+.notice_rec ul li{text-align:left;line-height:1.6em;overflow:hidden;white-space:nowrap;*text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+
+.c335{width:333px;border:solid 1px #EFEFEF;}
+.c335 .title{padding:0 20px;border-bottom:solid 1px #EFEFEF;height:30px;background:url(images/tbg333.jpg);overflow:hidden;text-align:right;}
+.c335 .title a,.c335 .title a:hover{font-size:14px;color:#000;line-height:30px;*line-height:32px;_line-height:30px;}
+.c335 .title h2{float:left;margin-top:0;*margin-top:1px;_margin-top:0;}
+.c335 ul {padding:6px 10px;}
+.c335 ul li{padding-left:10px;width:218px;line-height:22px;background:url(images/dot.gif) 0 9px no-repeat;overflow:hidden;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+.c335 h3{position:relative;top:0;*top:1px;_top:0;text-align:right;line-height:18px;font-weight:normal;}
+.c335 p{padding:10px;text-align:left;line-height:1.6em;}
+.c335 p a.tit{color:#039;font-size:14px;font-weight:bold;}
+
+.scrolldoorFrame{width:335px;margin:0px auto;overflow:hidden;} 
+.scrollUl{padding-left:5px;padding-top:5px;width:330px;height:28px;background:url(images/tbg.jpg);border-bottom:1px solid #EFEFEF;overflow:hidden;} 
+.scrollUl li{float:left;} 
+.bor03{border:1px solid #EFEFEF;border-top-width:0px;} 
+.sd01{cursor:pointer;border:1px solid #EFEFEF;background:url(images/scrollbg1.jpg);width:90px;height:24px;line-height:24px;color:#FFF;} 
+.sd02{cursor:pointer;border:1px solid #EFEFEF;background:url(images/scrollbg2.jpg);width:90px;height:24px;line-height:24px;COLOR:#FFF;} 
+
+.content{padding:14px;padding-bottom:14px;*padding-bottom:15px;}
+.content img{float:left;margin-right:10px;width:72px;height:72px;padding:1px;border:solid 1px #D7D7D7;}
+.content a:hover{background:#FFF;}
+.content a:hover img{border:solid 1px #CE2129;}
+.content p{line-height:1.6em;text-align:left;}
+.content p a,.content p a:hover{color:#666;}
+.content a.topic,.content a.topic:hover{font-weight:bold;color:#039;}
+.content p span a,.content p span a:hover{color:#A4621C;}
+.content ul li{width:282px;padding-left:10px;line-height:22px;background:url(images/dot.gif) 0 9px no-repeat;*background:url(images/dot.gif) 0 10px no-repeat;_background:url(images/dot.gif) 0 10px no-repeat;overflow:hidden;text-align:left;white-space:nowrap;text-overflow:ellipsis;-o-text-overflow:ellipsis;}
+
+.ad300x60{width:300px;height:60px;border:solid 6px #EFEFEF;}
+
+.search{border:solid 1px #E7E7E7;}
+.search_inner{border:solid 1px #FFF;padding:10px;background:#F6F6F6;}
+.search_title{text-align:left;color:#D51510;font-weight:bold;font-size:14px;}
+.search input{border:solid 1px #DD2429;width:200px;height:20px;}
+
+.ad_three{margin:0 auto;width:1002px;}
+.ad680{float:left;width:680px;}
+.ad336{float:left;width:336px;height:60px;}
+.ad312{float:right;width:312px;height:60px;}
+
+#footer{margin:0 auto;padding:10px;padding-bottom:15px;padding-top:15px;width:982px;border-top:solid 2px #BD110C;background:url(images/footer_bg.jpg);text-align:left;color:#7E7E7E;}
+#footer p{line-height:1.6em;}
+#footer p a{padding:0 5px;color:#7E7E7E;}
+#footer .service_nav{}
+.logo{margin-top:15px;}
+.logo a{color:#7E7E7E;text-decoration:underline;}
+
+
+#service{margin:0 auto;width:1002px;}
+#service .title{padding-left:30px;height:28px;line-height:28px;background:url(images/service_bg.jpg);font-size:14px;font-weight:bold;text-align:left;color:#FFF;overflow:hidden;}
+#service .content2{padding:20px;border:solid 1px #D8D8D8;border-top:none;}
+#service .content2 .job{float:left;width:300px;}
+#service .content2 .job img{width:300px;height:60px;border:solid 1px #000000;}
+#service a{color:#020346;}
+
+
+
+
+
+</style>
+</head>
+<body>
+<!-- 顶部 begin -->
+<div id="topbar">
+  <div class="topbar">
+    <div class="user"> <a href="#" target="_blank" class="username">wangyu</a> ［<a href="#" target="_blank">消息</a>］ <a href="#" target="_blank">空间</a> <a href="#" target="_blank">退出</a> </div>
+    <div class="nuodou1" id="div1" onmouseover="clearInterval(timer)" onmouseout="timer=setInterval(mar,30)"> <span class="div2" id="div2"> <a href="http://forum.eepw.com.cn/thread/205967/1" target="_blank">本站清理非法信息，对清除的用户和信息恕不另行通知</a><a href="http://count.eepw.com.cn/count/doRedirect?http://www.powerint.cn/zh-hans/applications/led-lighting?AdSource=EEPW11" target="_blank">LED 驱动芯片应用</a> <a href="http://count.eepw.com.cn/count/doRedirect?http://www.secomtel.com/webapp/main.asp?sid=1112&hmsr=eepw&hmmd=%E9%A6%96%E9%A1%B5%E9%A1%B6%E7%AB%AF%E6%96%87%E5%AD%97%E9%93%BE&hmpl=%E4%B8%96%E5%BC%BA%E7%94%B5%E8%AE%AF%E5%B7%A5%E4%B8%9A%E7%94%B5%E6%9C%BA%E6%8E%A7%E5%88%B6%E8%A7%A3%E5%86%B3%E6%96%B9%E6%A1%88&hmkw=201106&hmci=" target="_blank">世强电讯工业电机控制解决方案</a></span><span id="div3" class="div2"></span> </div>
+    <div class="topnav" > <a href="#" target="_blank">我要投稿</a>|<a href="#" target="_blank">手机版</a>|<a href="#" target="_blank">设为首页</a> </div>
+  </div>
+</div>
+<script>
+	var s,s2,s3,timer;
+
+s=getid("div1");
+s2=getid("div2");
+s3=getid("div3");
+s3.innerHTML=s2.innerHTML;
+timer=setInterval(mar,30);
+
+function mar(){
+if(s2.offsetWidth<=s.scrollLeft){
+s.scrollLeft-=s2.offsetWidth;
+}else{s.scrollLeft++;}
+}
+function getid(id){
+return document.getElementById(id);
+}
+
+	</script>
+<!-- 顶部 end -->
+<!-- header begin -->
+<div id="header">
+  <div class="logo_ad">
+    <!-- 顶部广告 begin -->
+    <div class="header_ad"> <a href="#" target=""><img src="images/720x60_QPOT_ZHS.jpg"></a> </div>
+    <!-- 顶部广告 end -->
+  </div>
+  <div class="clear"></div>
+  <div class="nav"> <a href="http://www.eepw.com.cn">首页</a>|<a href="http://www.eepw.com.cn">资讯</a>|<a href="http://www.eepw.com.cn">商机</a>|<a href="http://www.eepw.com.cn">下载</a>|<a href="http://www.eepw.com.cn">论 坛</a>|<a href="http://www.eepw.com.cn">博 客</a>|<a href="http://www.eepw.com.cn">微 博</a>|<a href="http://www.eepw.com.cn">Webinar</a>|<a href="http://www.eepw.com.cn">讲 堂</a>|<a href="http://www.eepw.com.cn">高 校</a>|<a href="http://www.eepw.com.cn">招聘</a>|<a href="http://www.eepw.com.cn">杂 志</a>|<a href="http://www.eepw.com.cn">会展</a>|<a href="http://www.eepw.com.cn">视 频</a>|<a href="http://www.eepw.com.cn">百科</a>|<a href="http://www.eepw.com.cn">问答</a>|<a href="http://www.eepw.com.cn">电路图</a>|<a href="http://www.eepw.com.cn">工程师手册</a>|<a href="http://www.eepw.com.cn">Datasheet</a>|<a href="http://www.eepw.com.cn">E问E答</a> </div>
+  <div class="tech_nav">
+    <div class="tech_nav_inner"> <span>技术频道：</span><a href="http://component.eepw.com.cn/">元件/连接器</a>|<a href="http://consume.eepw.com.cn/">消费类电子</a>|<a href="http://control.eepw.com.cn/">工业电子</a>|<a href="http://embedded.eepw.com.cn/">嵌入式系统</a>| <a href="http://analog.eepw.com.cn/">模拟IC</a>| <a href="http://wireless.eepw.com.cn/">通信技术</a>|<a href="http://eda.eepw.com.cn/">EDA与制造</a>|<a href="http://tm.eepw.com.cn/">测试测量</a>|<a href="http://power.eepw.com.cn/">电源管理</a>|<a href="http://auto.eepw.com.cn/">汽车电子</a>|<a href="http://medical.eepw.com.cn/">医疗电子</a> </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<!-- header end -->
+<div class="top_ad">
+  <div class="l_top_ad"> <a href="#" target="_blank"><img src="images/5d0100978cf27c2f3f0b956d4bf2959e.jpg"></a> </div>
+  <div class="r_top_ad"> <a href="#" target="_blank"><img src="images/f64d990c4769db2a32eeda91d08e92a9.gif"></a> </div>
+  <div class="clear"></div>
+</div>
+<div class="blank10"></div>
+<div id="mainbody">
+  <div id="column680">
+    <div id="l_column335">
+      <div class="focus">
+        <div align="center">
+          <script type=text/javascript>
+var pic_width=314; //图片宽度
+var pic_height=200; //图片高度
+var button_pos=4; //按扭位置 1左 2右 3上 4下
+var stop_time=3000; //图片停留时间(1000为1秒钟)
+var show_text=1; //是否显示文字标签 1显示 0不显示
+var txtcolor="000000"; //文字色
+var bgcolor="DDDDDD"; //背景色
+var imag=new Array();
+var link=new Array();
+var text=new Array();
+imag[1]="images/01.jpg";
+link[1]="http://www.zcool.com.cn/";
+text[1]="标题 1";
+imag[2]="images/02.jpg";
+link[2]="http://www.zcool.com.cn/";
+text[2]="标题 2";
+imag[3]="images/03.jpg";
+link[3]="http://www.zcool.com.cn/";
+text[3]="标题 3";
+imag[4]="images/04.jpg";
+link[4]="http://www.zcool.com.cn/";
+text[4]="标题 4";
+imag[5]="images/05.jpg";
+link[2]="http://www.zcool.com.cn/";
+text[5]="标题 5";
+//可编辑内容结束
+var swf_height=show_text==1?pic_height+20:pic_height;
+var pics="", links="", texts="";
+for(var i=1; i<imag.length; i++){
+	pics=pics+("|"+imag[i]);
+	links=links+("|"+link[i]);
+	texts=texts+("|"+text[i]);
+}
+pics=pics.substring(1);
+links=links.substring(1);
+texts=texts.substring(1);
+document.write('<object classid="clsid:d27cdb6e-ae6d-11cf-96b8-444553540000" codebase="http://fpdownload.macromedia.com/pub/shockwave/cabs/flash/swflash.cabversion=6,0,0,0" width="'+ pic_width +'" height="'+ swf_height +'">');
+document.write('<param name="movie" value="flash/focus.swf">');
+document.write('<param name="quality" value="high"><param name="wmode" value="opaque">');
+document.write('<param name="FlashVars" value="pics='+pics+'&links='+links+'&texts='+texts+'&pic_width='+pic_width+'&pic_height='+pic_height+'&show_text='+show_text+'&txtcolor='+txtcolor+'&bgcolor='+bgcolor+'&button_pos='+button_pos+'&stop_time='+stop_time+'">');
+document.write('<embed src="flash/focus.swf" FlashVars="pics='+pics+'&links='+links+'&texts='+texts+'&pic_width='+pic_width+'&pic_height='+pic_height+'&show_text='+show_text+'&txtcolor='+txtcolor+'&bgcolor='+bgcolor+'&button_pos='+button_pos+'&stop_time='+stop_time+'" quality="high" width="'+ pic_width +'" height="'+ swf_height +'" allowScriptAccess="sameDomain" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />');
+document.write('</object>');
+</script>
+        </div>
+      </div>
+      <div class="blank10"></div>
+      <div class="notice_rec">
+        <p><span><a href="#" target="_blank">电子DIY第二期之ARM 开发板DIY意见征集</a></span><br/>
+          <a href="#" target="_blank">时间过得真快，转眼，EEPW的电子DIY活动第一期的MCU DIY已经接近尾声，相信各位童鞋通过动手实践，从活动中学到了不会少，收获了很多，不仅对</a></p>
+        <ul>
+          <li><a href="#" target="_blank">【Webinar】泰克公司 RFID 测试方案</a></li>
+          <li><a href="#" target="_blank">【推荐】电子产品世界年终有奖调查</a></li>
+          <li><a href="#" target="_blank">【推荐】电子产品世界年终有奖调查</a></li>
+        </ul>
+      </div>
+    </div>
+    <div id="r_column335">
+      <div class="c335">
+        <div class="title">
+          <h2><a href="#" target="_blank">特别报道</a></h2>
+        </div>
+        <p><a href="#" target="_blank" class="tit">参与微博话题，每天送一本《乔布斯传》</a><br/>
+          无论是改锥、锉刀、镊子、烙铁还是手锤一把，也不管是电阻、电容、单片机、开发板还是示波器一台，搜罗身边钟爱装备，晒出学习成长过程中给你深刻印象的工具成员，关注本微博并加入#EEPW贴身实验室#话题……<a href="#" target="_blank">[详细]</a></p>
+      </div>
+      <div class="blank10"></div>
+      <script type="text/javascript"> 
+/* 
+十三妖 
+qq:181907667 
+msn:wl181907667@hotmail.com 
+邮箱:thirdteendevil@163.com 
+*/ 
+function scrollDoor(){ 
+} 
+scrollDoor.prototype = { 
+    sd : function(menus,divs,openClass,closeClass){ 
+        var _this = this; 
+        if(menus.length != divs.length) 
+        { 
+            alert("菜单层数量和内容层数量不一样!"); 
+            return false; 
+        }                 
+        for(var i = 0 ; i < menus.length ; i++) 
+        {     
+            _this.$(menus[i]).value = i;                 
+            _this.$(menus[i]).onmouseover = function(){ 
+                     
+                for(var j = 0 ; j < menus.length ; j++) 
+                {                         
+                    _this.$(menus[j]).className = closeClass; 
+                    _this.$(divs[j]).style.display = "none"; 
+                } 
+                _this.$(menus[this.value]).className = openClass;     
+                _this.$(divs[this.value]).style.display = "block";                 
+            } 
+        } 
+        }, 
+    $ : function(oid){ 
+        if(typeof(oid) == "string") 
+        return document.getElementById(oid); 
+        return oid; 
+    } 
+} 
+window.onload = function(){ 
+    var SDmodel = new scrollDoor(); 
+    SDmodel.sd(["m01","m02"],["c01","c02"],"sd01","sd02"); 
+    SDmodel.sd(["mm01","mm02"],["cc01","cc02"],"sd01","sd02"); 
+    SDmodel.sd(["mmm01","mmm02"],["ccc01","ccc02"],"sd01","sd02");
+	SDmodel.sd(["mmmm01","mmmm02"],["cccc01","cccc02"],"sd01","sd02"); 
+	
+	SDmodel.sd(["mmmmm01","mmmmm02"],["ccccc01","ccccc02"],"sd01","sd02"); 
+	SDmodel.sd(["mmmmmm01","mmmmmm02"],["cccccc01","cccccc02"],"sd01","sd02"); 
+	SDmodel.sd(["mmmmmmm01","mmmmmmm02"],["ccccccc01","ccccccc02"],"sd01","sd02"); 
+	
+		SDmodel.sd(["m1","m2"],["c1","c2"],"sd01","sd02"); 
+	SDmodel.sd(["mm1","mm2"],["cc1","cc2"],"sd01","sd02");  
+	SDmodel.sd(["mmm1","mmm2"],["ccc1","ccc2"],"sd01","sd02"); 
+	
+} 
+</script>
+      <div class="preview">
+        <div class="scrolldoorFrame">
+          <ul class="scrollUl">
+            <li class="sd01" id="m01">最新资讯</li>
+            <li class="sd02" id="m02">深度发布</li>
+          </ul>
+          <div class="bor03 cont">
+            <div id="c01">
+              <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+                <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                  <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+                <div class="blank10"></div>
+                <ul>
+                  <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                  <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                  <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                  <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+                </ul>
+              </div>
+            </div>
+            <div id="c02" class="hidden">
+              <div class="content">
+                <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                  <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+                <div class="blank10"></div>
+                <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                  <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+                <div class="blank10"></div>
+                <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                  <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="column312">
+    <div class="ad300x60"> <a href="#" target="_blank"><img src="images/1920fe4fb4c66e00d5faf54285c0ea05.gif"></a> </div>
+    <div class="blank10"></div>
+    <div class="search">
+      <div class="search_inner" style="padding-top:5px;">
+        <div class="search_title">EEPW搜索</div>
+        <div class="blank10"></div>
+        <div style="text-align:left;">
+          <form>
+            <input name="" type="text" />
+            <input type="button" value="搜索"  style="border:none;width:auto;height:auto;"/>
+          </form>
+        </div>
+      </div>
+    </div>
+    <div class="blank10"></div>
+    <div class="search" >
+      <div class="search_inner" style="padding-top:5px;">
+        <div class="search_title">intel专区</div>
+        <div style="text-align:left;">
+          <div class="blank10"></div>
+          <div class="content" style="padding:0;"> <a href="#" target="_blank"><img src="images/icon_1_intel.JPG" width="90" height="60" style="width:90px;height:60px;"></a>
+            <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">英特尔中国嵌入式社区</a><br>
+              <a href="#" target="_blank">提供面向英特尔最新嵌入式处理器和芯片组的技术资源、机密文档、在线培训</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+            <div class="blank10"></div>
+            <ul>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div class="blank10"></div>
+<div class="ad_three">
+  <div class="ad680">
+    <div class="ad336"> <img src="images/1.gif" style="width:336px;height:60px;"> </div>
+    <div class="ad336" style="float:right;"> <img src="images/2.gif" style="width:335px;height:60px;"> </div>
+  </div>
+  <div class="ad312" > <img src="images/3.gif" style="width:312px;height:60px;"> </div>
+  <div class="clear"></div>
+</div>
+<div class="blank10"></div>
+<div id="mainbody">
+  <div id="column680">
+    <div id="l_column335" style="overflow:hidden;">
+      <div class="scrolldoorFrame">
+        <ul class="scrollUl">
+          <li class="sd01" id="mm01">高端访谈</li>
+          <li class="sd02" id="mm02">EEPW原创</li>
+        </ul>
+        <div class="bor03 cont">
+          <div id="cc01">
+            <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <ul>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="cc02" class="hidden">
+            <div class="content">
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blank10"></div>
+      <div class="scrolldoorFrame">
+        <ul class="scrollUl">
+          <li class="sd01" id="mmmm01">编辑博客</li>
+          <li class="sd02" id="mmmm02">推荐博客</li>
+        </ul>
+        <div class="bor03 cont">
+          <div id="cccc01">
+            <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <ul>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="cccc02" class="hidden">
+            <div class="content">
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="c335">
+        <div class="title">
+          <h2><a href="#" target="_blank">论坛精华</a></h2>
+        </div>
+        <div class="content">
+          <ul>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="blank15"></div>
+      <div class="scrolldoorFrame">
+        <ul class="scrollUl">
+          <li class="sd01" id="mmmmm01">编辑博客</li>
+          <li class="sd02" id="mmmmm02">推荐博客</li>
+        </ul>
+        <div class="bor03 cont">
+          <div id="ccccc01">
+            <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <ul>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="ccccc02" class="hidden">
+            <div class="content">
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scrolldoorFrame">
+        <ul class="scrollUl">
+          <li class="sd01" id="mmmmmm01">编辑博客</li>
+          <li class="sd02" id="mmmmmm02">推荐博客</li>
+        </ul>
+        <div class="bor03 cont">
+          <div id="cccccc01">
+            <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <ul>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="cccccc02" class="hidden">
+            <div class="content">
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scrolldoorFrame">
+        <ul class="scrollUl">
+          <li class="sd01" id="mmmmmmm01">编辑博客</li>
+          <li class="sd02" id="mmmmmmm02">推荐博客</li>
+        </ul>
+        <div class="bor03 cont">
+          <div id="ccccccc01">
+            <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <ul>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="ccccccc02" class="hidden">
+            <div class="content">
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div id="r_column335">
+      <div class="preview">
+        <div class="scrolldoorFrame">
+          <ul class="scrollUl">
+            <li class="sd01" id="mmm01">活动专区</li>
+            <li class="sd02" id="mmm02">竞赛专区</li>
+          </ul>
+          <div class="bor03 cont">
+            <div id="ccc01">
+              <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+                <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                  <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+                <div class="blank10"></div>
+                <ul>
+                  <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                  <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                  <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                  <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+                </ul>
+              </div>
+            </div>
+            <div id="ccc02" class="hidden">
+              <div class="content">
+                <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                  <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+                <div class="blank10"></div>
+                <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                  <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+                <div class="blank10"></div>
+                <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                  <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="blank10"></div>
+      <div class="c335">
+        <div class="title">
+          <h2><a href="#" target="_blank">设计参考</a></h2>
+        </div>
+        <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+          <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+            <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+          <div class="blank10"></div>
+          <ul>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="blank10"></div>
+      <div class="c335">
+        <div class="title">
+          <h2><a href="#" target="_blank">论坛精华</a></h2>
+        </div>
+        <div class="content">
+          <ul>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+            <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+          </ul>
+        </div>
+      </div>
+      <div class="blank10"></div>
+      <div class="scrolldoorFrame">
+        <ul class="scrollUl">
+          <li class="sd01" id="m1">高端访谈</li>
+          <li class="sd02" id="m2">EEPW原创</li>
+        </ul>
+        <div class="bor03 cont">
+          <div id="c1">
+            <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <ul>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="c2" class="hidden">
+            <div class="content">
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scrolldoorFrame">
+        <ul class="scrollUl">
+          <li class="sd01" id="mm1">高端访谈</li>
+          <li class="sd02" id="mm2">EEPW原创</li>
+        </ul>
+        <div class="bor03 cont">
+          <div id="cc1">
+            <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <ul>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="cc2" class="hidden">
+            <div class="content">
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="scrolldoorFrame">
+        <ul class="scrollUl">
+          <li class="sd01" id="mmm1">高端访谈</li>
+          <li class="sd02" id="mmm2">EEPW原创</li>
+        </ul>
+        <div class="bor03 cont">
+          <div id="ccc1">
+            <div class="content"> <a href="#" target="_blank"><img src="images/topic.jpg"></a>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">中国希望并将拥有自己的半导体生产厂</a><br>
+                <a href="#" target="_blank">中国没有自己的硬盘、DRAM和闪存生产厂，但是这种情况可能会发生变化。中国正在进入硬盘组件生产领域，华为和创新科存储技术有限公司生产的是使用硬盘</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <ul>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">中国联通公布iPhone 4S合约价：5880元起</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">比亚迪IT产业群 继续走基于零部件的ODM+EMS之路</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">去年我国移动互联网市场规模达851亿</a></li>
+                <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">美国创力医疗整合器EDS－MD让简化管理成为可能</a></li>
+              </ul>
+            </div>
+          </div>
+          <div id="ccc2" class="hidden">
+            <div class="content">
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+              <div class="blank10"></div>
+              <p> <a href="#" target="_blank" title="杨雅晴巴黎索吻刺激男人" class="topic">杨雅晴巴黎索吻刺激男人</a><br>
+                <a href="#" target="_blank">杨雅晴大大方方巴黎索吻，中国男人们别别扭扭备受刺激，表面上慷慨陈词，私下里一遍遍看图</a> <span><a href="#" target="_blank">[详细]</a></span> </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div id="column312">
+    <div class="search" >
+      <div class="search_inner" style="padding-top:5px;"> <a href="#" target="_blank" style="float:right">更多>></a>
+        <div class="search_title">在线研讨会</div>
+        <div class="blank10"></div>
+        <div style="text-align:left;">
+          <div> <img src="images/webinar_ad.jpg" style="margin:0 auto;"> </div>
+          <div class="blank10"></div>
+          <div class="content" style="padding:0;">
+            <div class="blank10"></div>
+            <div><strong>精彩研讨会回顾</strong></div>
+            <ul>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blank10"></div>
+    <div class="search" >
+      <div class="search_inner" style="padding-top:5px;"> <a href="#" target="_blank" style="float:right">更多>></a>
+        <div class="search_title">资源中心</div>
+        <div style="text-align:left;">
+          <div class="content" style="padding:0;">
+            <div class="blank10"></div>
+            <ul>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blank10"></div>
+    <div class="search" >
+      <div class="search_inner" style="padding-top:5px;"> <a href="#" target="_blank" style="float:right">更多>></a>
+        <div class="search_title">资料下载</div>
+        <div style="text-align:left;">
+          <div class="content" style="padding:0;">
+            <div class="blank10"></div>
+            <ul>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blank10"></div>
+    <div class="search" >
+      <div class="search_inner" style="padding-top:5px;"> <a href="#" target="_blank" style="float:right">更多>></a>
+        <div class="search_title">热点视频</div>
+        <div style="text-align:left;">
+          <div class="content" style="padding:0;">
+            <div class="blank10"></div>
+            <ul>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+              <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="blank10"></div>
+    <div class="search" > </div>
+    <div> <img src="images/r.jpg" width="312" height="542"> </div>
+  </div>
+  <div class="clear"></div>
+</div>
+<div id="service">
+  <div class="title">综合服务区 </div>
+  <div class="content2">
+    <div class="job" style="width:300px;float:left;margin-right:20px;">
+      <div><img src="images/job.jpg" style="border:solid 1px #000;"></div>
+      <ul style="text-align:left;line-height:1.6em;">
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+        <li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <div class="job" style="width:300px;float:left;margin-right:20px;">
+      <div><img src="images/job.jpg" style="border:solid 1px #000;"></div>
+      <ul style="text-align:left;line-height:1.6em;">
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+        <li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <div class="job" style="width:300px;float:left;">
+      <div><img src="images/job.jpg" style="border:solid 1px #000;"></div>
+      <ul style="text-align:left;line-height:1.6em;">
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽体检肾结石深圳捡">[精彩视频]EVOC嵌入式方案在线研讨会</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁丽患上肾结石深圳捡">[华北工控]嵌入式主板产品介绍</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[公告]英特尔嵌入式社区使用导航</a></li>
+        <li><a href="#" target="_blank" title="司贤利：深圳捡金案梁患上肾结石深圳捡">[视频]超给力的英特尔酷睿I5</a></li>
+        <li>
+      </ul>
+      <div class="clear"></div>
+    </div>
+    <div class="clear"></div>
+  </div>
+</div>
+<div class="blank10"></div>
+<div id="footer">
+  <p><strong>兄弟网站：</strong><a href="http://www.eaw.com.cn" target="_blank">电子设计应用</a>|<a href="http://www.tele.com.cn" target="_blank">通讯世界</a>|<a href="http://www.ditanshijie.com.cn/index.action" target="_blank">低碳世界</a></p>
+  <p><strong>友情链接：</strong><a href="http://www.eaw.com.cn/" target="_blank">电子设计应用</a>|<a href="http://www.csia.net.cn/" rel="nofollow" target="_blank">中国半导体行业网</a>|<a href="http://www.eetrend.com/" target="_blank">电子创新网</a>|<a href="http://www.tele.com.cn/" target="_blank">通讯世界</a>|<a href="http://www.china-image.cn" target="_blank">中国图像网</a>|<a href="http://www.laogu.com/" target="_blank">老古开发网</a>|<a href="http://www.rfidchina.org/" rel="nofollow" target="_blank">RFID中国网</a>|<a href="http://www.lierda.com/" rel="nofollow" target="_blank">利尔达电子</a>|<a href="http://www.21dianyuan.com/" target="_blank">世纪电源网</a>|<a href="http://www.dzsc.com/" target="_blank">维库电子市场网</a>|<a href="http://www.ec.hc360.com/" target="_blank">慧聪网电子行业</a>|<a href="http://www.cntronics.com/" target="_blank">电子元件技术</a>|<a href="http://www.eetop.cn/" target="_blank">中国电子顶级开发网</a>|<a href="http://www.icbuy.com/index.html" target="_blank">ICBUY亿芯网</a>|<a href="http://www.21ic.com/" target="_blank">21IC中国电子网</a>|<a href="http://www.5117.com" rel="nofollow" target="_blank">我要仪器网</a>|<a href="http://www.dianziw.com/" target="_blank">电子元器件网</a>|<a href="http://nuedc.sjtu.edu.cn/" target="_blank">Intel大学生设计竞赛</a>|<a href="http://www.connworld.com/" target="_blank">连接世界</a>|<a href="http://www.hqew.com/" target="_blank">华强电子网</a>|<a href="http://www.ic-trade.com/" target="_blank">电子零件贸易网</a>|<a href="http://www.ledgb.com" target="_blank">LED环球在线</a>|<a href="http://www.soeol.com/" target="_blank">搜电网</a>|<a href="http://www.ledhp.com/" target="_blank">大功率LED网</a>|<a href="http://www.ofweek.com/" target="_blank">OFweek光电新闻网</a>|<a href="http://www.cnledw.com/" target="_blank">中国LED网</a>|<a href="http://www.cecb2b.com/" target="_blank">元器件交易网</a>|<a href="http://info.china.alibaba.com/news/community/c2.html" target="_blank">阿里巴巴电子</a>|<a href="http://www.etime.net.cn/" target="_blank">E代电子</a>|<a href="http://www.eccn.com/" target="_blank">中电网</a>|<a href="http://www.17ic.com/" target="_blank">IC电子渠道网</a>|<a href="http://www.dianyuan.com/" target="_blank">电源网</a>|<a href="http://www.qic.com.cn" target="_blank">全球IC采购网</a>|<a href="http://www.dianyuan.com" target="_blank">电源网</a>|<a href="http://www.esbf.org.cn" target="_blank">嵌入式系统联谊会</a>|<a href="http://www.elecfans.com" target="_blank">电子发烧友</a>|<a href="http://www.icgoo.net" target="_blank">IC购商城</a>|<a href="http://www.ceea.org.cn" target="_blank">中国电子企业协会</a>|<a href="http://www.chinatyco.com" target="_blank">中国连接器论坛</a></p>
+</div>
+<div class="logo">
+<p style="padding-bottom:5px;text-align:center;color:#999999;"><a href="http://www.eepw.com.cn/event/company/about.html" target="_blank">关于我们</a> - <a href="http://www.eepw.com.cn/event/company/ad.html" target="_blank" >广告服务</a> - <a href="http://www.eepw.com.cn/event/company/service.html" target="_blank">企业会员服务</a> - <a href="http://www.eepw.com.cn/event/company/new/index.html" target="_blank">新手上路</a> - <a href="http://www.eepw.com.cn/event/company/contact.html" target="_blank">联系我们</a> - <a href="http://www.eepw.com.cn/event/company/contributions.html" target="_blank">征稿</a> - <a href="http://www.eepw.com.cn/company/link" target="_blank">友情链接</a> - <a href="http://wap.eepw.com.cn" target="_blank">手机EEPW</a></p>
+<p style="text-align:center;color:#999999;padding-bottom:10px;"><span style="font-family:Arial, Helvetica, sans-serif;font-size:10px">Copyright ©2002 ELECTRONIC ENGINEERING & PRODUCT WORLD. All rights reserved.</span><br/>
+  京ICP060382号  北京市公安局备案:1101082052<br/>
+  《电子产品世界》杂志社 版权所有 北京东晓国际技术信息咨询有限公司</p>
+<div>
+</body>
+</html>
